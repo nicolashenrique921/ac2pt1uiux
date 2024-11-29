@@ -42,5 +42,6 @@ public class User { // criação da classe User, com a função de representar o
         }
         return result;// retornando resultado se verdadeiro, se não retorna falso
     }
+    
 }
 // Fim da classe
