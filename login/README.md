@@ -36,4 +36,3 @@ Caminhos idenpendentes:
 2.Conexão bem-sucedida, mas login não encontrado (resultado permanece false).
 3.Falha na conexão (o código cai no bloco catch).
 
-![alt text](image.png) grafo de fluxo
