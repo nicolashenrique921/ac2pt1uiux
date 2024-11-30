@@ -4,9 +4,17 @@ import java.sql.Connection;//importações da bliblioteca para a utilização do
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-public class User { // criação da classe User, com a função de representar o usuario
-    public Connection conectarBD() { //conexão com banco de dados
+/**
+ * Classe responsável por gerenciar operações de login de usuários com integração a um banco de dados.
+ */
+public class User {
+    /**
+     * Método para estabelecer a conexão com o banco de dados.
+     *
+     * @return Um objeto {@link Connection} que representa a conexão ativa com o banco de dados,
+     * ou {@code null} em caso de falha.
+     */
+    public Connection conectarBD() {
         Connection conn = null;//inicia a conexão com banco de dados
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -18,9 +26,23 @@ public class User { // criação da classe User, com a função de representar o
         return conn;//retorna a conexão em caso de falha
     }
 
-    public String nome = "";//variavel para armazenar nome
-    public boolean result = false;// variavel para resultado de verificação de login
-
+    /**
+     * Variável para armazenar nome do usuário.
+     */
+    public String nome = "";
+    /**
+     * Variável para indicar o resultado da verificação de login.
+     * {@code true} se o login for bem-sucedido, {@code false} caso contrário.
+     */
+    public boolean result = false;
+/**
+     * Método para verificar as credenciais do usuário no banco de dados.
+     *
+     * @param login O login fornecido pelo usuário.
+     * @param senha A senha fornecida pelo usuário.
+     * @return {@code true} se as credenciais forem válidas e o usuário for encontrado no banco,
+     * {@code false} caso contrário.
+     */
     public boolean verificarUsuario(String login, String senha) {//verificação de usuario no banco de dados
         String sql = "";
         Connection conn = conectarBD();//obtendo conexão com banco de dados
@@ -42,6 +64,6 @@ public class User { // criação da classe User, com a função de representar o
         }
         return result;// retornando resultado se verdadeiro, se não retorna falso
     }
-    
+
 }
 // Fim da classe
