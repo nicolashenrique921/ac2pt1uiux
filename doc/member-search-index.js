@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ac2uiux","c":"User","l":"conectarBD()"},{"p":"ac2uiux","c":"User","l":"nome"},{"p":"ac2uiux","c":"User","l":"result"},{"p":"ac2uiux","c":"User","l":"User()","u":"%3Cinit%3E()"},{"p":"ac2uiux","c":"User","l":"verificarUsuario(String, String)","u":"verificarUsuario(java.lang.String,java.lang.String)"}];updateSearchResults();
